@@ -100,6 +100,10 @@
     [_loop release];
     [_playAll release];
     [_background release];
+    [_backButton release];
+    [_playStopButton release];
+    [_forwardButton release];
+    [_musicProgressView release];
     [super dealloc];
 }
 
@@ -134,6 +138,15 @@
     [self.loop setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
     [self.playAll setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
     [self.background setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+}
+
+- (IBAction)BackButtonPressed:(id)sender {
+}
+
+- (IBAction)playStopButtonPressed:(id)sender {
+}
+
+- (IBAction)forwardButtonPressed:(id)sender {
 }
 
 -(void)audioInit:(NSString *)fName

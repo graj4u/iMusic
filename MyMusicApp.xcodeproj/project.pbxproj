@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FB32CE3162352D300D5AC55 /* stop-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB32CDE162352D300D5AC55 /* stop-icon.png */; };
+		0FB32CE5162352D300D5AC55 /* pause-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB32CE0162352D300D5AC55 /* pause-icon.png */; };
+		0FB32CE6162352D300D5AC55 /* play-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB32CE1162352D300D5AC55 /* play-icon.png */; };
+		0FB32CE7162352D300D5AC55 /* rewind-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB32CE2162352D300D5AC55 /* rewind-icon.png */; };
+		0FB32CE91623543200D5AC55 /* forward-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB32CE81623543200D5AC55 /* forward-icon.png */; };
 		B91DDB401613852D00DCA672 /* AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = B91DDB2A1613852D00DCA672 /* AQGridView.m */; };
 		B91DDB411613852D00DCA672 /* AQGridViewAnimatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B91DDB2E1613852D00DCA672 /* AQGridViewAnimatorItem.m */; };
 		B91DDB421613852D00DCA672 /* AQGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B91DDB301613852D00DCA672 /* AQGridViewCell.m */; };
@@ -358,6 +363,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FB32CDE162352D300D5AC55 /* stop-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop-icon.png"; sourceTree = "<group>"; };
+		0FB32CE0162352D300D5AC55 /* pause-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-icon.png"; sourceTree = "<group>"; };
+		0FB32CE1162352D300D5AC55 /* play-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-icon.png"; sourceTree = "<group>"; };
+		0FB32CE2162352D300D5AC55 /* rewind-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind-icon.png"; sourceTree = "<group>"; };
+		0FB32CE81623543200D5AC55 /* forward-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-icon.png"; sourceTree = "<group>"; };
 		B91DDB291613852D00DCA672 /* AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridView.h; sourceTree = "<group>"; };
 		B91DDB2A1613852D00DCA672 /* AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridView.m; sourceTree = "<group>"; };
 		B91DDB2B1613852D00DCA672 /* AQGridView+CellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLayout.h"; sourceTree = "<group>"; };
@@ -749,6 +759,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FB32CDC162352B000D5AC55 /* Player Button */ = {
+			isa = PBXGroup;
+			children = (
+				0FB32CDE162352D300D5AC55 /* stop-icon.png */,
+				0FB32CE0162352D300D5AC55 /* pause-icon.png */,
+				0FB32CE1162352D300D5AC55 /* play-icon.png */,
+				0FB32CE2162352D300D5AC55 /* rewind-icon.png */,
+				0FB32CE81623543200D5AC55 /* forward-icon.png */,
+			);
+			name = "Player Button";
+			sourceTree = "<group>";
+		};
 		B91DDB271613851C00DCA672 /* AQGridView */ = {
 			isa = PBXGroup;
 			children = (
@@ -856,6 +878,7 @@
 		B93BA1B216116C4200A01A38 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0FB32CDC162352B000D5AC55 /* Player Button */,
 				B96C0F9016143A690006CC40 /* Siren.mp3 */,
 				B96C0F7016141AEE0006CC40 /* Others */,
 				B91DDB5B1613894400DCA672 /* Images */,
@@ -1565,6 +1588,11 @@
 				B96C0F9116143A690006CC40 /* Siren.mp3 in Resources */,
 				B96C0F9F161456EC0006CC40 /* background2.png in Resources */,
 				B96C0FA2161457A10006CC40 /* alert-panel.png in Resources */,
+				0FB32CE3162352D300D5AC55 /* stop-icon.png in Resources */,
+				0FB32CE5162352D300D5AC55 /* pause-icon.png in Resources */,
+				0FB32CE6162352D300D5AC55 /* play-icon.png in Resources */,
+				0FB32CE7162352D300D5AC55 /* rewind-icon.png in Resources */,
+				0FB32CE91623543200D5AC55 /* forward-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
