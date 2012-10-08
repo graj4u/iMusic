@@ -103,11 +103,11 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO7-O3-7zB">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="9Z2-nr-TIG"/>
                                             <constraint firstAttribute="width" constant="25" id="FaS-GG-Qfb"/>
+                                            <constraint firstAttribute="height" constant="25" id="qzV-Ny-37E"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Button" image="rewind-icon.png">
+                                        <state key="normal" image="rewind-icon.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -123,7 +123,7 @@
                                             <constraint firstAttribute="width" constant="25" id="Rsn-Fo-B4l"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Button" image="play-icon.png">
+                                        <state key="normal" image="play-icon.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -137,10 +137,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nly-Ge-oWG">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="al1-sF-W7f"/>
-                                            <constraint firstAttribute="height" constant="28" id="wKl-Ar-h6C"/>
+                                            <constraint firstAttribute="height" constant="25" id="bXa-5J-Cih"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Button" image="forward-icon.png">
+                                        <state key="normal" image="forward-icon.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -162,13 +162,14 @@
                                     <constraint firstItem="JO7-O3-7zB" firstAttribute="leading" secondItem="9a5-td-pJs" secondAttribute="leading" constant="46" id="1kP-tm-azg"/>
                                     <constraint firstItem="AAp-e7-XdV" firstAttribute="leading" secondItem="JO7-O3-7zB" secondAttribute="leading" type="default" id="Hho-6A-b51"/>
                                     <constraint firstItem="AAp-e7-XdV" firstAttribute="trailing" secondItem="Nly-Ge-oWG" secondAttribute="trailing" type="default" id="LeF-Cs-2SN"/>
-                                    <constraint firstAttribute="bottom" secondItem="84K-Ew-Hi9" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="U8i-9z-u96"/>
+                                    <constraint firstItem="Nly-Ge-oWG" firstAttribute="top" secondItem="9a5-td-pJs" secondAttribute="top" constant="5" id="QzG-ap-CIO"/>
                                     <constraint firstAttribute="bottom" secondItem="AAp-e7-XdV" secondAttribute="bottom" constant="5" id="XR6-ZH-0jK"/>
-                                    <constraint firstAttribute="bottom" secondItem="JO7-O3-7zB" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Zt7-8c-gSp"/>
                                     <constraint firstItem="JO7-O3-7zB" firstAttribute="top" secondItem="84K-Ew-Hi9" secondAttribute="top" type="default" id="ady-FF-aM4"/>
+                                    <constraint firstItem="JO7-O3-7zB" firstAttribute="bottom" secondItem="84K-Ew-Hi9" secondAttribute="bottom" type="default" id="cM0-Ys-7he"/>
                                     <constraint firstItem="84K-Ew-Hi9" firstAttribute="centerX" secondItem="9a5-td-pJs" secondAttribute="centerX" type="default" id="cyM-vG-AfC"/>
-                                    <constraint firstAttribute="bottom" secondItem="Nly-Ge-oWG" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="l26-RK-5Cs"/>
-                                    <constraint firstItem="Nly-Ge-oWG" firstAttribute="baseline" secondItem="84K-Ew-Hi9" secondAttribute="baseline" type="default" id="ymb-4j-MUy"/>
+                                    <constraint firstItem="JO7-O3-7zB" firstAttribute="top" secondItem="9a5-td-pJs" secondAttribute="top" constant="7" id="khM-sg-zb4"/>
+                                    <constraint firstItem="JO7-O3-7zB" firstAttribute="baseline" secondItem="Nly-Ge-oWG" secondAttribute="baseline" type="default" id="m9T-ao-wrB"/>
+                                    <constraint firstItem="Nly-Ge-oWG" firstAttribute="baseline" secondItem="84K-Ew-Hi9" secondAttribute="baseline" type="default" id="nMr-kC-TEk"/>
                                 </constraints>
                             </view>
                         </subviews>
