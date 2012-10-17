@@ -2,9 +2,7 @@
 //  GRFirstViewController.m
 //  MyMusicApp
 //
-//  Created by Gaurav Raj on 9/25/12.
-//  Copyright (c) 2012 GRaj. All rights reserved.
-//
+
 
 #import "GRFirstViewController.h"
 
@@ -14,34 +12,38 @@
 
 @implementation GRFirstViewController
 
-@synthesize gridView, gridViewCellContent, names;
+@synthesize gridView, gridViewCellContent, names,currentSelection;
 
 - (void)viewDidLoad
 {
 	
 	self.names = [NSArray arrayWithObjects:
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
-				  @"Siren",
+				  @"Siren.mp3",
+				  @"Siren1.mp3",
+				  @"Siren.mp3",
+				  @"Siren1.mp3",
+				  @"Siren.mp3",
+				  @"Siren1.mp3",
+				  @"Siren.mp3",
+				  @"Siren1.mp3",
+				  @"Siren.mp3",
+				  @"Siren1.mp3",
+				  @"Siren.mp3",
+				  @"Siren1.mp3",
+				  @"Siren.mp3",
+				  @"Siren1.mp3",
+				  @"Siren.mp3",
+				  @"Siren1.mp3",
+				  @"Siren.mp3",
+				  @"Siren1.mp3",
 				  nil];
 	
     self.gridView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background1.png"]];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background2.png"]];
+    
+    [self.playStopButton setBackgroundImage:[UIImage imageNamed:@"play-icon.png"] forState:UIControlStateNormal];
+    
+    self.currentSelection = 0;
     
 	gridView.dataSource = self;
     gridView.delegate = self;
@@ -71,8 +73,10 @@
 	
 	ReusableGridViewCell *content = (ReusableGridViewCell *)[cell.contentView viewWithTag:1];
 	NSString *name = [names objectAtIndex:index];
+    
 	//NSString *imageName = [[name lowercaseString] stringByAppendingString:@".gif"];
 	//content.imageView.image = [UIImage imageNamed:imageName];
+    
 	content.textLabel.text = name;
     
     
@@ -89,6 +93,8 @@
     NSLog (@"Selected theArgument=%d\n", index);
     
     [self audioInit:[self.names objectAtIndex:index]];
+    
+    
 }
 
 - (void)dealloc
@@ -103,7 +109,8 @@
     [_backButton release];
     [_playStopButton release];
     [_forwardButton release];
-    [_musicProgressView release];
+    [_musicProgressSlider release];
+    [_sliderTimer release];
     [super dealloc];
 }
 
@@ -117,9 +124,12 @@
     [self.playAll setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
     [self.background setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
     
+    
+    
 }
 
 - (IBAction)playAllButtonPressed:(id)sender {
+    
     [self.loop setBackgroundImage:[UIImage imageNamed:@"tb-11.png"] forState:UIControlStateNormal];
     [self.playAll setBackgroundImage:[UIImage imageNamed:@"tb-33.png"] forState:UIControlStateNormal];
     [self.background setBackgroundImage:[UIImage imageNamed:@"tb-1.png"] forState:UIControlStateNormal];
@@ -127,6 +137,9 @@
     [self.loop setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
     [self.playAll setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.background setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
+    
+    
+    
 }
 
 - (IBAction)backgroundButtonPressed:(id)sender {
@@ -138,34 +151,139 @@
     [self.loop setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
     [self.playAll setTitleColor:[UIColor scrollViewTexturedBackgroundColor] forState:UIControlStateNormal];
     [self.background setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    
 }
 
-- (IBAction)BackButtonPressed:(id)sender {
+- (IBAction)BackButtonPressed:(UIButton *)sender {
+    
+    
 }
 
-- (IBAction)playStopButtonPressed:(id)sender {
+- (IBAction)playStopButtonPressed:(UIButton *)sender  {
+    
+     
+    if (sender.tag == 0) {
+        
+        [self audioInit:[self.names objectAtIndex:self.currentSelection]];
+        
+        [self.playStopButton setBackgroundImage:[UIImage imageNamed:@"pause-icon.png"] forState:UIControlStateNormal];
+        [self.playStopButton setTag:1];
+        
+    }
+    else {
+         [self.playStopButton setBackgroundImage:[UIImage imageNamed:@"play-icon.png"] forState:UIControlStateNormal];
+         [audioPlayer pause];
+        [self.playStopButton setTag:0];
+    }
+    
+     
+    
 }
 
 - (IBAction)forwardButtonPressed:(id)sender {
+    
+    
+    
+}
+#pragma mark -
+#pragma mark nextSongs
+
+
+-(IBAction)playNextSong:(id)sender {
+    
+   //  NSLog(@"playNextSong-->%d",self.currentSelection);
+    
+    if([self.names count] > 0){
+    
+        if(self.currentSelection < [self.names count]-1){
+            self.currentSelection ++;
+            // [audioPlayer stop];
+           [self audioInit:[self.names objectAtIndex:self.currentSelection]];
+         
+            
+        }
+        else{
+            self.currentSelection = [self.names count];
+           
+        }
+        
+    }
+    
 }
 
--(void)audioInit:(NSString *)fName
-{
-    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Siren.mp3", [[NSBundle mainBundle] resourcePath]]];
+#pragma mark -
+#pragma mark previousSong
+
+-(IBAction)playPreviousSong:(id)sender {
+    
+   // NSLog(@"playPreviousSong-->%d",self.currentSelection);
+    
+    if([self.names count] > 0){
+        if (self.currentSelection > 0) {
+            
+            self.currentSelection -- ;
+            //[audioPlayer stop];
+            
+            [self audioInit:[self.names objectAtIndex:self.currentSelection]];
+        }
+        else
+        {
+             self.currentSelection = 0;
+            return;
+        }
+       
+    }
+    
+    
+}
+
+
+
+
+-(void)audioInit:(NSString *)fName {
+    
+    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath],fName]];
+    
 	NSLog(@"Audio file url:%@",url);
+    if (audioPlayer != nil){
+        
+        [audioPlayer release];
+        audioPlayer=nil;
+
+    }
+    
 	NSError *error;
     if (audioPlayer == nil){
         audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-    } else {
+    }
+    else {
         [audioPlayer stop];
     }
     
+    
+    [audioPlayer setVolume:1.0];// Set Voloumn
 	audioPlayer.numberOfLoops = -1;
     
 	if (audioPlayer == nil)
+        
 		NSLog(@"Error!%@",[error description]);
-	else
-		[audioPlayer play];
+    
+	else{
+        
+        // Sets a timer which kgets the current sound time and updates the UISlider in 1 sec intervals
+        _sliderTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateSlider) userInfo:nil repeats:YES];
+        // Sets the maximum value of the UISlider
+        _musicProgressSlider.maximumValue = audioPlayer.duration;
+        // Sets the valueChanged target
+        [_musicProgressSlider addTarget:self action:@selector(sliderChanged : ) forControlEvents : UIControlEventValueChanged];
+        audioPlayer.delegate=self;
+        // Play the audio
+        [audioPlayer prepareToPlay];
+        [audioPlayer play];
+        
+		//[audioPlayer play];
+    }
     
     // Extra Methods
     //audioPlayer.volume = 0.5; // 0.0 - no volume; 1.0 full volume
@@ -175,6 +293,30 @@
     //[audioPlayer stop]; // Does not reset currentTime; sending play resumes
 }
 
+
+- (void)updateSlider {
+    // Updates the slider about the music time
+    _musicProgressSlider.value = audioPlayer.currentTime;
+    
+}
+
+- (IBAction)sliderChanged : (UISlider *)sender {
+    
+    // Fast skips the music when user scrolls the UISlider
+    [audioPlayer stop];
+    [audioPlayer setCurrentTime:_musicProgressSlider.value];
+    [audioPlayer prepareToPlay];
+    [audioPlayer play];
+}
+
+// Stops the timer when the music is finished
+- (void)audioPlayerDidFinishPlaying : (AVAudioPlayer *)player successfully : (BOOL)flag {
+    // Music completed
+    if (flag) {
+        
+        [_sliderTimer invalidate];
+    }
+}
 
 
 @end

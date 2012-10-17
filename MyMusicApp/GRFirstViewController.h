@@ -2,17 +2,16 @@
 //  GRFirstViewController.h
 //  MyMusicApp
 //
-//  Created by Gaurav Raj on 9/25/12.
-//  Copyright (c) 2012 GRaj. All rights reserved.
-//
+
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "AQGridView.h"
 #import "ReusableGridViewCell.h"
 
-@interface GRFirstViewController : UIViewController <AQGridViewDataSource,AQGridViewDelegate> {
+@interface GRFirstViewController : UIViewController <AQGridViewDataSource,AQGridViewDelegate,AVAudioPlayerDelegate> {
     AVAudioPlayer* audioPlayer;
+    int currentSelection;
 }
 
 @property (nonatomic, retain) IBOutlet AQGridView *gridView;
@@ -23,8 +22,9 @@
 @property (retain, nonatomic) IBOutlet UIButton *backButton;
 @property (retain, nonatomic) IBOutlet UIButton *playStopButton;
 @property (retain, nonatomic) IBOutlet UIButton *forwardButton;
-@property (retain, nonatomic) IBOutlet UIProgressView *musicProgressView;
-
+@property (retain, nonatomic) IBOutlet UISlider *musicProgressSlider;
+@property (retain, nonatomic) IBOutlet NSTimer *sliderTimer;
+@property (nonatomic,assign)int currentSelection;
 - (IBAction)loopButtonPressed:(id)sender;
 - (IBAction)playAllButtonPressed:(id)sender;
 - (IBAction)backgroundButtonPressed:(id)sender;
@@ -33,5 +33,7 @@
 - (IBAction)forwardButtonPressed:(id)sender;
 
 -(void)audioInit:(NSString *)fName;
+-(IBAction)playNextSong:(id)sender;
+-(IBAction)playPreviousSong:(id)sender;
 
 @end

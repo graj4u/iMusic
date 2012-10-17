@@ -12,6 +12,8 @@
 		0FB32CE6162352D300D5AC55 /* play-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB32CE1162352D300D5AC55 /* play-icon.png */; };
 		0FB32CE7162352D300D5AC55 /* rewind-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB32CE2162352D300D5AC55 /* rewind-icon.png */; };
 		0FB32CE91623543200D5AC55 /* forward-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB32CE81623543200D5AC55 /* forward-icon.png */; };
+		8670E039162EE034003E1DBE /* GRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8670E038162EE034003E1DBE /* GRFirstViewController.m */; };
+		8670E03B162EE093003E1DBE /* Siren1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8670E03A162EE093003E1DBE /* Siren1.mp3 */; };
 		B91DDB401613852D00DCA672 /* AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = B91DDB2A1613852D00DCA672 /* AQGridView.m */; };
 		B91DDB411613852D00DCA672 /* AQGridViewAnimatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B91DDB2E1613852D00DCA672 /* AQGridViewAnimatorItem.m */; };
 		B91DDB421613852D00DCA672 /* AQGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B91DDB301613852D00DCA672 /* AQGridViewCell.m */; };
@@ -44,7 +46,6 @@
 		B93BA1C216116C4200A01A38 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B93BA1C116116C4200A01A38 /* Default-568h@2x.png */; };
 		B93BA1C516116C4200A01A38 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93BA1C316116C4200A01A38 /* MainStoryboard_iPhone.storyboard */; };
 		B93BA1C816116C4200A01A38 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93BA1C616116C4200A01A38 /* MainStoryboard_iPad.storyboard */; };
-		B93BA1CB16116C4200A01A38 /* GRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B93BA1CA16116C4200A01A38 /* GRFirstViewController.m */; };
 		B93BA30916116DC300A01A38 /* 3d.png in Resources */ = {isa = PBXBuildFile; fileRef = B93BA1DD16116DC200A01A38 /* 3d.png */; };
 		B93BA30A16116DC300A01A38 /* abacus.png in Resources */ = {isa = PBXBuildFile; fileRef = B93BA1DE16116DC200A01A38 /* abacus.png */; };
 		B93BA30B16116DC300A01A38 /* airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = B93BA1DF16116DC200A01A38 /* airplane.png */; };
@@ -368,6 +369,9 @@
 		0FB32CE1162352D300D5AC55 /* play-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-icon.png"; sourceTree = "<group>"; };
 		0FB32CE2162352D300D5AC55 /* rewind-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rewind-icon.png"; sourceTree = "<group>"; };
 		0FB32CE81623543200D5AC55 /* forward-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-icon.png"; sourceTree = "<group>"; };
+		8670E037162EE034003E1DBE /* GRFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRFirstViewController.h; sourceTree = "<group>"; };
+		8670E038162EE034003E1DBE /* GRFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRFirstViewController.m; sourceTree = "<group>"; };
+		8670E03A162EE093003E1DBE /* Siren1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Siren1.mp3; sourceTree = "<group>"; };
 		B91DDB291613852D00DCA672 /* AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridView.h; sourceTree = "<group>"; };
 		B91DDB2A1613852D00DCA672 /* AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridView.m; sourceTree = "<group>"; };
 		B91DDB2B1613852D00DCA672 /* AQGridView+CellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLayout.h"; sourceTree = "<group>"; };
@@ -418,8 +422,6 @@
 		B93BA1C116116C4200A01A38 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B93BA1C416116C4200A01A38 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		B93BA1C716116C4200A01A38 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		B93BA1C916116C4200A01A38 /* GRFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRFirstViewController.h; sourceTree = "<group>"; };
-		B93BA1CA16116C4200A01A38 /* GRFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRFirstViewController.m; sourceTree = "<group>"; };
 		B93BA1DD16116DC200A01A38 /* 3d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3d.png; sourceTree = "<group>"; };
 		B93BA1DE16116DC200A01A38 /* abacus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abacus.png; sourceTree = "<group>"; };
 		B93BA1DF16116DC200A01A38 /* airplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airplane.png; sourceTree = "<group>"; };
@@ -857,8 +859,8 @@
 				B93BA1BB16116C4200A01A38 /* GRAppDelegate.m */,
 				B93BA1C316116C4200A01A38 /* MainStoryboard_iPhone.storyboard */,
 				B93BA1C616116C4200A01A38 /* MainStoryboard_iPad.storyboard */,
-				B93BA1C916116C4200A01A38 /* GRFirstViewController.h */,
-				B93BA1CA16116C4200A01A38 /* GRFirstViewController.m */,
+				8670E037162EE034003E1DBE /* GRFirstViewController.h */,
+				8670E038162EE034003E1DBE /* GRFirstViewController.m */,
 				B91DDB4A1613856100DCA672 /* ReusableGridViewCell.h */,
 				B91DDB4B1613856100DCA672 /* ReusableGridViewCell.m */,
 				B91DDB4C1613856100DCA672 /* ReusableGridViewCell.xib */,
@@ -880,6 +882,7 @@
 			children = (
 				0FB32CDC162352B000D5AC55 /* Player Button */,
 				B96C0F9016143A690006CC40 /* Siren.mp3 */,
+				8670E03A162EE093003E1DBE /* Siren1.mp3 */,
 				B96C0F7016141AEE0006CC40 /* Others */,
 				B91DDB5B1613894400DCA672 /* Images */,
 				B91DDB271613851C00DCA672 /* AQGridView */,
@@ -1593,6 +1596,7 @@
 				0FB32CE6162352D300D5AC55 /* play-icon.png in Resources */,
 				0FB32CE7162352D300D5AC55 /* rewind-icon.png in Resources */,
 				0FB32CE91623543200D5AC55 /* forward-icon.png in Resources */,
+				8670E03B162EE093003E1DBE /* Siren1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1605,7 +1609,6 @@
 			files = (
 				B93BA1B816116C4200A01A38 /* main.m in Sources */,
 				B93BA1BC16116C4200A01A38 /* GRAppDelegate.m in Sources */,
-				B93BA1CB16116C4200A01A38 /* GRFirstViewController.m in Sources */,
 				B91DDB401613852D00DCA672 /* AQGridView.m in Sources */,
 				B91DDB411613852D00DCA672 /* AQGridViewAnimatorItem.m in Sources */,
 				B91DDB421613852D00DCA672 /* AQGridViewCell.m in Sources */,
@@ -1621,6 +1624,7 @@
 				B96C0F7616141B580006CC40 /* TWViewController.m in Sources */,
 				B96C0F7916141B7E0006CC40 /* MailViewController.m in Sources */,
 				B96C0F7C16141B900006CC40 /* LikeViewController.m in Sources */,
+				8670E039162EE034003E1DBE /* GRFirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
