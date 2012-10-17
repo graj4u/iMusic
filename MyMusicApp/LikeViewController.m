@@ -132,12 +132,12 @@
 {
     JHWebBrowser *browser = [JHWebBrowser new];
 
-    browser.showTitleBar = YES;
+    browser.showTitleBar = NO;
     browser.showAddressBar = NO;
-    browser.showToolbar = YES;
+    browser.showToolbar = NO;
     
     if (indexPath.row==0) {
-       browser.url = [NSURL URLWithString:@"http://www.facebook.com/tata"];
+       browser.url = [NSURL URLWithString:@"http://www.facebook.com/tcs"];
     }
     else if (indexPath.row==1) {
       browser.url = [NSURL URLWithString:@"http://www.youtube.com/apple"];
@@ -148,6 +148,8 @@
     else if (indexPath.row==3) {
         browser.url = [NSURL URLWithString:@"http://www.wipro.com"];
     }
+    
+    [self.navigationController pushViewController:browser animated:YES];
 }
 
 

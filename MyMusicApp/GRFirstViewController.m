@@ -48,6 +48,14 @@
 	gridView.dataSource = self;
     gridView.delegate = self;
 	[gridView reloadData];
+    
+    [_playControlBoard.layer setCornerRadius:10.0f];
+    [_playControlBoard.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [_playControlBoard.layer setBorderWidth:1.5f];
+    [_playControlBoard.layer setShadowColor:[UIColor blackColor].CGColor];
+    [_playControlBoard.layer setShadowOpacity:0.8];
+    [_playControlBoard.layer setShadowRadius:3.0];
+    [_playControlBoard.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
 }
 
 - (NSUInteger)numberOfItemsInGridView:(AQGridView *)aGridView

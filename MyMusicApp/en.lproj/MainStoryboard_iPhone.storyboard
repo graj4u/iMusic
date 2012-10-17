@@ -102,6 +102,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9a5-td-pJs">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO7-O3-7zB">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="N5c-3k-NId"/>
+                                            <constraint firstAttribute="height" constant="25" id="mNL-xe-4jy"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="rewind-icon.png" backgroundImage="rewind-icon.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -115,6 +119,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84K-Ew-Hi9">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="snN-vu-nwx"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="play-icon.png" backgroundImage="play-icon.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,6 +135,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nly-Ge-oWG">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="Mp2-5p-PHH"/>
+                                            <constraint firstAttribute="height" constant="25" id="ilT-Xq-bgu"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="forward-icon.png" backgroundImage="forward-icon.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -140,41 +151,39 @@
                                             <action selector="playNextSong:" destination="2" eventType="touchUpInside" id="2PA-Ob-mf5"/>
                                         </connections>
                                     </button>
-                                    <progressView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAp-e7-XdV">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="192" id="G6T-Wy-gDh"/>
-                                        </constraints>
-                                    </progressView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAp-e7-XdV"/>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="JO7-O3-7zB" firstAttribute="leading" secondItem="9a5-td-pJs" secondAttribute="leading" constant="46" id="1kP-tm-azg"/>
-                                    <constraint firstItem="AAp-e7-XdV" firstAttribute="leading" secondItem="JO7-O3-7zB" secondAttribute="leading" type="default" id="Hho-6A-b51"/>
-                                    <constraint firstItem="AAp-e7-XdV" firstAttribute="trailing" secondItem="Nly-Ge-oWG" secondAttribute="trailing" type="default" id="LeF-Cs-2SN"/>
-                                    <constraint firstItem="Nly-Ge-oWG" firstAttribute="top" secondItem="9a5-td-pJs" secondAttribute="top" constant="5" id="QzG-ap-CIO"/>
-                                    <constraint firstAttribute="bottom" secondItem="AAp-e7-XdV" secondAttribute="bottom" constant="5" id="XR6-ZH-0jK"/>
+                                    <constraint firstItem="84K-Ew-Hi9" firstAttribute="bottom" secondItem="JO7-O3-7zB" secondAttribute="bottom" type="default" id="H9h-S9-7dT"/>
+                                    <constraint firstItem="JO7-O3-7zB" firstAttribute="leading" secondItem="9a5-td-pJs" secondAttribute="leading" constant="52" id="KA5-sG-nuA"/>
+                                    <constraint firstAttribute="trailing" secondItem="AAp-e7-XdV" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="R42-m8-kAe"/>
+                                    <constraint firstItem="Nly-Ge-oWG" firstAttribute="top" secondItem="9a5-td-pJs" secondAttribute="top" constant="6" id="SSq-D6-wHU"/>
+                                    <constraint firstItem="AAp-e7-XdV" firstAttribute="leading" secondItem="9a5-td-pJs" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="SmO-w5-Bv1"/>
+                                    <constraint firstItem="84K-Ew-Hi9" firstAttribute="centerX" secondItem="AAp-e7-XdV" secondAttribute="centerX" type="default" id="U9r-Tx-4Pg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nly-Ge-oWG" secondAttribute="trailing" constant="47" id="aGf-Cj-jxz"/>
                                     <constraint firstItem="JO7-O3-7zB" firstAttribute="top" secondItem="84K-Ew-Hi9" secondAttribute="top" type="default" id="ady-FF-aM4"/>
-                                    <constraint firstItem="84K-Ew-Hi9" firstAttribute="centerX" secondItem="9a5-td-pJs" secondAttribute="centerX" type="default" id="cyM-vG-AfC"/>
                                     <constraint firstItem="JO7-O3-7zB" firstAttribute="top" secondItem="9a5-td-pJs" secondAttribute="top" constant="7" id="khM-sg-zb4"/>
                                     <constraint firstItem="JO7-O3-7zB" firstAttribute="baseline" secondItem="Nly-Ge-oWG" secondAttribute="baseline" type="default" id="m9T-ao-wrB"/>
                                     <constraint firstItem="Nly-Ge-oWG" firstAttribute="baseline" secondItem="84K-Ew-Hi9" secondAttribute="baseline" type="default" id="nMr-kC-TEk"/>
+                                    <constraint firstItem="AAp-e7-XdV" firstAttribute="top" secondItem="Nly-Ge-oWG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sMR-Ee-yF8"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="9a5-td-pJs" firstAttribute="centerX" secondItem="Pcr-QQ-r9l" secondAttribute="centerX" type="default" id="0L2-9X-npo"/>
                             <constraint firstAttribute="trailing" secondItem="9a5-td-pJs" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2FL-vY-hus"/>
-                            <constraint firstAttribute="bottom" secondItem="Pcr-QQ-r9l" secondAttribute="bottom" constant="63" id="9vB-oC-bCZ"/>
                             <constraint firstAttribute="bottom" secondItem="9a5-td-pJs" secondAttribute="bottom" constant="8" id="Bn5-6l-JA8"/>
                             <constraint firstItem="qTg-S0-FQO" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="FL2-Ze-p2a"/>
-                            <constraint firstItem="Pcr-QQ-r9l" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="GPE-hF-3V2"/>
-                            <constraint firstAttribute="trailing" secondItem="Pcr-QQ-r9l" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="I6j-MO-mL2"/>
+                            <constraint firstAttribute="bottom" secondItem="Pcr-QQ-r9l" secondAttribute="bottom" constant="68" id="LoB-oc-KOg"/>
                             <constraint firstItem="qTg-S0-FQO" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="VNN-wF-bc6"/>
+                            <constraint firstItem="Pcr-QQ-r9l" firstAttribute="top" secondItem="16" secondAttribute="top" constant="61" id="YFw-9U-fYV"/>
                             <constraint firstItem="qTg-S0-FQO" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="brs-nh-0LJ"/>
+                            <constraint firstItem="Pcr-QQ-r9l" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="5" id="c3r-XX-0Pt"/>
                             <constraint firstItem="9a5-td-pJs" firstAttribute="top" secondItem="16" secondAttribute="top" constant="350" id="dHv-xV-pan"/>
                             <constraint firstItem="9a5-td-pJs" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gpb-Vt-L8O"/>
-                            <constraint firstAttribute="bottom" secondItem="qTg-S0-FQO" secondAttribute="bottom" constant="359" id="gxO-iT-oEC"/>
-                            <constraint firstItem="Pcr-QQ-r9l" firstAttribute="top" secondItem="16" secondAttribute="top" constant="58" id="t8e-Cc-8gQ"/>
+                            <constraint firstAttribute="bottom" secondItem="qTg-S0-FQO" secondAttribute="bottom" constant="359" id="sZU-qz-LRH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sounds" image="music.png" id="7"/>
@@ -185,6 +194,7 @@
                         <outlet property="gridView" destination="Pcr-QQ-r9l" id="eyr-4p-c1c"/>
                         <outlet property="loop" destination="C9x-go-ASM" id="BCh-8K-4Vm"/>
                         <outlet property="playAll" destination="7UJ-q0-dRO" id="oEE-pE-415"/>
+                        <outlet property="playControlBoard" destination="9a5-td-pJs" id="Lfy-SF-9Si"/>
                         <outlet property="playStopButton" destination="84K-Ew-Hi9" id="gkW-vR-Uca"/>
                     </connections>
                 </viewController>
@@ -442,6 +452,7 @@
                 <relationship kind="outlet" name="loop" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="musicProgressSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="playAll" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="playControlBoard" candidateClass="UIView"/>
                 <relationship kind="outlet" name="playStopButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="sliderTimer" candidateClass="NSTimer"/>
             </relationships>
