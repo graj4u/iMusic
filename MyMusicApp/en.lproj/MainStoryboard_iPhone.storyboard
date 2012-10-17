@@ -191,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-131"/>
+            <point key="canvasLocation" x="147" y="-99"/>
         </scene>
         <!--View Controller - Follow Us-->
         <scene sceneID="RJh-XO-ijH">
@@ -338,7 +338,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252" y="163"/>
+            <point key="canvasLocation" x="511" y="-44"/>
         </scene>
     </scenes>
     <resources>
@@ -354,60 +354,6 @@
         <image name="thumb-up.png" width="30" height="30"/>
         <image name="twitter.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="AQGridView" superclassName="UIScrollView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AQGridView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="dataSource"/>
-                <relationship kind="outlet" name="delegate"/>
-            </relationships>
-        </class>
-        <class className="FBViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBViewController.h"/>
-        </class>
-        <class className="GRFirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GRFirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="BackButtonPressed:"/>
-                <relationship kind="action" name="backgroundButtonPressed:"/>
-                <relationship kind="action" name="forwardButtonPressed:"/>
-                <relationship kind="action" name="loopButtonPressed:"/>
-                <relationship kind="action" name="playAllButtonPressed:"/>
-                <relationship kind="action" name="playNextSong:"/>
-                <relationship kind="action" name="playPreviousSong:"/>
-                <relationship kind="action" name="playStopButtonPressed:"/>
-                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="background" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="forwardButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="gridView" candidateClass="AQGridView"/>
-                <relationship kind="outlet" name="gridViewCellContent" candidateClass="ReusableGridViewCell"/>
-                <relationship kind="outlet" name="loop" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="musicProgressSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="playAll" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="playStopButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="sliderTimer" candidateClass="NSTimer"/>
-            </relationships>
-        </class>
-        <class className="MailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MailViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NSTimer" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSTimer.h"/>
-        </class>
-        <class className="ReusableGridViewCell" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ReusableGridViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="TWViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TWViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
