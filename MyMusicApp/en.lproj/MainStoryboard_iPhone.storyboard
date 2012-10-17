@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
@@ -184,46 +184,85 @@
                         <outlet property="forwardButton" destination="Nly-Ge-oWG" id="JIw-Ee-rue"/>
                         <outlet property="gridView" destination="Pcr-QQ-r9l" id="eyr-4p-c1c"/>
                         <outlet property="loop" destination="C9x-go-ASM" id="BCh-8K-4Vm"/>
-                        <outlet property="musicProgressView" destination="AAp-e7-XdV" id="sKv-tm-GZc"/>
                         <outlet property="playAll" destination="7UJ-q0-dRO" id="oEE-pE-415"/>
                         <outlet property="playStopButton" destination="84K-Ew-Hi9" id="gkW-vR-Uca"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147" y="-99"/>
+            <point key="canvasLocation" x="63" y="-167"/>
         </scene>
-        <!--View Controller - Follow Us-->
+        <!--Like View Controller-->
         <scene sceneID="RJh-XO-ijH">
             <objects>
-                <viewController id="J9s-Gf-xFX" sceneMemberID="viewController">
+                <viewController id="J9s-Gf-xFX" customClass="LikeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QLa-jf-j8M">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Follow Us" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="udv-aT-4SM">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="V4N-By-jYq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="thumb-up.png" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-jw-SvF"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="77" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YtF-A6-bKn">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="303" id="USF-rZ-bTI"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CCell" textLabel="vmB-I7-zb0" detailTextLabel="qyA-T7-3zW" rowHeight="77" style="IBUITableViewCellStyleSubtitle" id="nMS-Ig-4qD">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="77"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmB-I7-zb0">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyA-T7-3zW">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="J9s-Gf-xFX" id="tgV-Mj-bWn"/>
+                                    <outlet property="delegate" destination="J9s-Gf-xFX" id="SpX-Pm-IhR"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="udv-aT-4SM" firstAttribute="leading" secondItem="QLa-jf-j8M" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8QI-xB-2yd"/>
-                            <constraint firstAttribute="trailing" secondItem="udv-aT-4SM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Hsm-cb-7l9"/>
-                            <constraint firstItem="ABi-jw-SvF" firstAttribute="leading" secondItem="QLa-jf-j8M" secondAttribute="leading" constant="37" id="Iiy-Xn-uKh"/>
-                            <constraint firstItem="udv-aT-4SM" firstAttribute="top" secondItem="QLa-jf-j8M" secondAttribute="top" constant="162" id="Mow-Ib-fSV"/>
-                            <constraint firstItem="ABi-jw-SvF" firstAttribute="centerY" secondItem="udv-aT-4SM" secondAttribute="centerY" type="default" id="fjB-WL-f5b"/>
+                            <constraint firstItem="YtF-A6-bKn" firstAttribute="trailing" secondItem="QLa-jf-j8M" secondAttribute="trailing" type="default" id="088-dy-GcR"/>
+                            <constraint firstItem="udv-aT-4SM" firstAttribute="leading" secondItem="QLa-jf-j8M" secondAttribute="leading" constant="34" id="A7g-ih-1Bl"/>
+                            <constraint firstItem="YtF-A6-bKn" firstAttribute="top" secondItem="udv-aT-4SM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Gtb-Tr-jyX"/>
+                            <constraint firstItem="YtF-A6-bKn" firstAttribute="leading" secondItem="QLa-jf-j8M" secondAttribute="leading" type="default" id="a3o-Xh-Lcd"/>
+                            <constraint firstItem="ABi-jw-SvF" firstAttribute="leading" secondItem="QLa-jf-j8M" secondAttribute="leading" constant="42" id="gyb-9f-p2B"/>
+                            <constraint firstItem="ABi-jw-SvF" firstAttribute="top" secondItem="QLa-jf-j8M" secondAttribute="top" constant="20" symbolic="YES" type="default" id="hMl-vS-r4x"/>
+                            <constraint firstItem="YtF-A6-bKn" firstAttribute="bottom" secondItem="QLa-jf-j8M" secondAttribute="bottom" type="default" id="m2m-mJ-Mtr"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Follow Us" image="thumb-up.png" id="ZgC-2n-ccb"/>
                     <navigationItem key="navigationItem" id="gjA-8h-qrB"/>
+                    <connections>
+                        <outlet property="myTableView" destination="YtF-A6-bKn" id="Cd7-hs-cwr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oaq-pF-kkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045" y="-131"/>
+            <point key="canvasLocation" x="866" y="-42"/>
         </scene>
         <!--Mail View Controller - More-->
         <scene sceneID="arK-mm-UKV">
@@ -254,7 +293,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gb0-95-KY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446" y="170"/>
+            <point key="canvasLocation" x="866" y="566"/>
         </scene>
         <!--View Controller - Second-->
         <scene sceneID="13">
@@ -285,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="532"/>
+            <point key="canvasLocation" x="459" y="566"/>
         </scene>
         <!--View Controller - Twitter-->
         <scene sceneID="L3h-si-WLh">
@@ -316,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsE-Lc-cuN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045" y="532"/>
+            <point key="canvasLocation" x="1355" y="-42"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -331,14 +370,33 @@
                     <connections>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
                         <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
-                        <segue destination="J9s-Gf-xFX" kind="relationship" relationship="viewControllers" id="lfv-vw-MwK"/>
+                        <segue destination="Nby-PO-Abo" kind="relationship" relationship="viewControllers" id="lfv-vw-MwK"/>
                         <segue destination="fez-fU-bHK" kind="relationship" relationship="viewControllers" id="n4H-Uc-9zu"/>
                         <segue destination="63b-5C-zwX" kind="relationship" relationship="viewControllers" id="ioR-cI-e41"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="511" y="-44"/>
+            <point key="canvasLocation" x="-461" y="39"/>
+        </scene>
+        <!--Navigation Controller - Follow Us-->
+        <scene sceneID="awi-HC-slL">
+            <objects>
+                <navigationController id="Nby-PO-Abo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Follow Us" image="thumb-up.png" id="ZgC-2n-ccb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AO2-AZ-NBm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J9s-Gf-xFX" kind="relationship" relationship="rootViewController" id="UTh-Ji-EIh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLC-zh-AsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447" y="-35"/>
         </scene>
     </scenes>
     <resources>
@@ -354,6 +412,66 @@
         <image name="thumb-up.png" width="30" height="30"/>
         <image name="twitter.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="AQGridView" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AQGridView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dataSource"/>
+                <relationship kind="outlet" name="delegate"/>
+            </relationships>
+        </class>
+        <class className="FBViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBViewController.h"/>
+        </class>
+        <class className="GRFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GRFirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="BackButtonPressed:"/>
+                <relationship kind="action" name="backgroundButtonPressed:"/>
+                <relationship kind="action" name="forwardButtonPressed:"/>
+                <relationship kind="action" name="loopButtonPressed:"/>
+                <relationship kind="action" name="playAllButtonPressed:"/>
+                <relationship kind="action" name="playNextSong:"/>
+                <relationship kind="action" name="playPreviousSong:"/>
+                <relationship kind="action" name="playStopButtonPressed:"/>
+                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="background" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="forwardButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="gridView" candidateClass="AQGridView"/>
+                <relationship kind="outlet" name="gridViewCellContent" candidateClass="ReusableGridViewCell"/>
+                <relationship kind="outlet" name="loop" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="musicProgressSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="playAll" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="playStopButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sliderTimer" candidateClass="NSTimer"/>
+            </relationships>
+        </class>
+        <class className="LikeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LikeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="MailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MailViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NSTimer" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSTimer.h"/>
+        </class>
+        <class className="ReusableGridViewCell" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ReusableGridViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="TWViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TWViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

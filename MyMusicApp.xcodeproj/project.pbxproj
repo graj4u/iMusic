@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F636260162F025B00240568 /* backIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F636259162F025B00240568 /* backIcon.png */; };
+		0F636261162F025B00240568 /* backIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F63625A162F025B00240568 /* backIcon@2x.png */; };
+		0F636262162F025B00240568 /* forwardIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F63625B162F025B00240568 /* forwardIcon.png */; };
+		0F636263162F025B00240568 /* forwardIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F63625C162F025B00240568 /* forwardIcon@2x.png */; };
+		0F636264162F025B00240568 /* JHWebBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F63625E162F025B00240568 /* JHWebBrowser.m */; };
+		0F636265162F025B00240568 /* JHWebBrowser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F63625F162F025B00240568 /* JHWebBrowser.xib */; };
 		0FB32CE3162352D300D5AC55 /* stop-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB32CDE162352D300D5AC55 /* stop-icon.png */; };
 		0FB32CE5162352D300D5AC55 /* pause-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB32CE0162352D300D5AC55 /* pause-icon.png */; };
 		0FB32CE6162352D300D5AC55 /* play-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB32CE1162352D300D5AC55 /* play-icon.png */; };
@@ -364,6 +370,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F636259162F025B00240568 /* backIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backIcon.png; sourceTree = "<group>"; };
+		0F63625A162F025B00240568 /* backIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backIcon@2x.png"; sourceTree = "<group>"; };
+		0F63625B162F025B00240568 /* forwardIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forwardIcon.png; sourceTree = "<group>"; };
+		0F63625C162F025B00240568 /* forwardIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forwardIcon@2x.png"; sourceTree = "<group>"; };
+		0F63625D162F025B00240568 /* JHWebBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHWebBrowser.h; sourceTree = "<group>"; };
+		0F63625E162F025B00240568 /* JHWebBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHWebBrowser.m; sourceTree = "<group>"; };
+		0F63625F162F025B00240568 /* JHWebBrowser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JHWebBrowser.xib; sourceTree = "<group>"; };
 		0FB32CDE162352D300D5AC55 /* stop-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop-icon.png"; sourceTree = "<group>"; };
 		0FB32CE0162352D300D5AC55 /* pause-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-icon.png"; sourceTree = "<group>"; };
 		0FB32CE1162352D300D5AC55 /* play-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-icon.png"; sourceTree = "<group>"; };
@@ -761,6 +774,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F636257162F025A00240568 /* JHWebBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				0F636258162F025B00240568 /* Images */,
+				0F63625D162F025B00240568 /* JHWebBrowser.h */,
+				0F63625E162F025B00240568 /* JHWebBrowser.m */,
+				0F63625F162F025B00240568 /* JHWebBrowser.xib */,
+			);
+			path = JHWebBrowser;
+			sourceTree = "<group>";
+		};
+		0F636258162F025B00240568 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0F636259162F025B00240568 /* backIcon.png */,
+				0F63625A162F025B00240568 /* backIcon@2x.png */,
+				0F63625B162F025B00240568 /* forwardIcon.png */,
+				0F63625C162F025B00240568 /* forwardIcon@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		0FB32CDC162352B000D5AC55 /* Player Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -872,6 +907,7 @@
 				B96C0F7816141B7E0006CC40 /* MailViewController.m */,
 				B96C0F7A16141B8F0006CC40 /* LikeViewController.h */,
 				B96C0F7B16141B8F0006CC40 /* LikeViewController.m */,
+				0F636257162F025A00240568 /* JHWebBrowser */,
 				B93BA1B216116C4200A01A38 /* Supporting Files */,
 			);
 			path = MyMusicApp;
@@ -1597,6 +1633,11 @@
 				0FB32CE7162352D300D5AC55 /* rewind-icon.png in Resources */,
 				0FB32CE91623543200D5AC55 /* forward-icon.png in Resources */,
 				8670E03B162EE093003E1DBE /* Siren1.mp3 in Resources */,
+				0F636260162F025B00240568 /* backIcon.png in Resources */,
+				0F636261162F025B00240568 /* backIcon@2x.png in Resources */,
+				0F636262162F025B00240568 /* forwardIcon.png in Resources */,
+				0F636263162F025B00240568 /* forwardIcon@2x.png in Resources */,
+				0F636265162F025B00240568 /* JHWebBrowser.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1625,6 +1666,7 @@
 				B96C0F7916141B7E0006CC40 /* MailViewController.m in Sources */,
 				B96C0F7C16141B900006CC40 /* LikeViewController.m in Sources */,
 				8670E039162EE034003E1DBE /* GRFirstViewController.m in Sources */,
+				0F636264162F025B00240568 /* JHWebBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

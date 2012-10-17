@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JHWebBrowser.h"
 
-@interface LikeViewController : UIViewController
+@interface LikeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (retain, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
